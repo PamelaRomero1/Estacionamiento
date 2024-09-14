@@ -1,0 +1,37 @@
+
+ 
+<ion-content [fullscreen]="true">
+  <div class="centered-content">
+    
+    <ion-title>Bienvenido!</ion-title>
+
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input [(ngModel)]="usuario" name="usuario" maxlength="8" required></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="errors.includes('Usuario es requerido')">
+      Usuario es requerido.
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="floating">Clave</ion-label>
+      <ion-input [(ngModel)]="clave" name="clave" type="password" maxlength="6" required></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="errors.includes('Clave es requerida')">
+      Clave es requerido.
+    </ion-text>
+
+    <ion-button expand="block" (click)="validadorDatos()">Ingresar</ion-button>
+
+    <hr>
+
+    <ion-item lines="none">
+      <a [routerLink]="['/crear']">Registrarme</a>
+      <span>&nbsp;/&nbsp;</span>
+      <a [routerLink]="['/recuperar']">Olvidé mi clave</a>
+    </ion-item>
+  </div>
+</ion-content>
+
+
+

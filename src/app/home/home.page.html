@@ -1,20 +1,51 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title class="custom-text-size">
+      Mi Estacionamiento
     </ion-title>
+    <i class="custom-i">El estacionamiento que buscas
+    </i>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-title>Bienvenido, {{ receivedUsername }}!</ion-title>
+  <ion-item>
+      <ion-card color="warning">
+        <ion-card-header>
+          <ion-card-title [routerLink]="['/login']"><ion-icon name="person-outline"></ion-icon>Iniciar Sesión</ion-card-title>
+        </ion-card-header>
+      </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <ion-card color="warning">
+        <ion-card-header>
+          <ion-card-title  [routerLink]="['/buscar']"><ion-icon name="search-outline"></ion-icon> Buscar</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+   
+</ion-item>
+
+<ion-item>
+  <ion-card color="warning">
+    <ion-card-header>
+      <ion-card-title><ion-icon name="information-outline"></ion-icon>Información</ion-card-title>  
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card color="warning">
+    <ion-card-header>
+      <ion-card-title><ion-icon name="file-tray-full-outline"></ion-icon> Contacto</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+</ion-item>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+   
+  </ion-toolbar>
+</ion-header>
+  
 </ion-content>
+
+
